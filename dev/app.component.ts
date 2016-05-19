@@ -4,7 +4,7 @@ import {Component} from 'angular2/core';
     selector: 'my-app',
     template: `
         {{onTest()}},
-        <input type="text" value="{{name}}"/>
+        <input type="text" [value]="name" [ngClass]="{red: true}" [disabled]="1 === 1">
     `,
 })
 export class AppComponent {
