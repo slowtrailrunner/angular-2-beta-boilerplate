@@ -4,3 +4,15 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
 }
+
+.parent {
+  border: 1px solid #ccc;
+  background-color: #eee;
+  padding: 10px;
+}
+
+.child {
+  border: 1px solid #000000;
+  background-color: #cccccc;
+  padding: 10px;
+}
