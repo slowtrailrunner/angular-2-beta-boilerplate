@@ -5,7 +5,11 @@ import {Injectable} from "angular2/core";
 
 @Injectable()
 export class LoggingService {
-    log(message: String) {
-        console.log(message);
+
+    private _lastMessage = '';
+
+    log(message: string) {
+        console.log("Current message: "+ message + " Last message: "+this._lastMessage);
+        this._lastMessage = message;
     }
 }
