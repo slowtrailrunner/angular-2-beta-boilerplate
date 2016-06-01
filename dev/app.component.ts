@@ -1,12 +1,12 @@
 import {Component} from 'angular2/core';
-import {TemplateDriveFormComponent} from "./template-drive-form.component";
+import {DataDriveFormComponent} from "./data-drive-form.component";
 
 @Component({
     selector: 'my-app',
     template: `
-        <my-template-drive></my-template-drive>
+        <my-data-drive></my-data-drive>
     `,
-    directives: [TemplateDriveFormComponent]
+    directives: [DataDriveFormComponent]
 })
 export class AppComponent {
 
