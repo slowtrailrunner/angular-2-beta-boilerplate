@@ -32,7 +32,9 @@ export class ShoppingListNewItemComponent implements OnInit{
     }
 
     onSubmit() {
-        this._shippingListService.insertItem({name: this.item.name, amount: this.item.amount});
+        let newItem = {name: this.item.name, amount: this.item.amount};
+        console.log("Adding: " + newItem.name)
+        this._shippingListService.insertItem(newItem);
     }
 
     ngOnInit():any {
