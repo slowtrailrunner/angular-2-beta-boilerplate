@@ -11,19 +11,16 @@ import {ListItem} from './list-item';
 export class FilterPipe implements PipeTransform{
 
     transform(value: ListItem[], args:string[]):any {
-        console.log("Filtering with: " + args[0]);
-        if(value.length === 0) {
-            return value;
-        }
-
-        let resultArray = [];
-        for (let item of value) {
-            if (item.name.match('^.*' + args[0] + '.*$')) {
-                resultArray.push(item);
-            }
-        }
-        console.log(resultArray);
-        return resultArray;
+        return value.filter(item => {
+            return item.name.indexOf(args[0]) !== -1;
+        });
+        // for (let item of value) {
+        //     if (item.name.match('^.*' + args[0] + '.*$')) {
+        //         resultArray.push(item);
+        //     }
+        // }
+        // console.log(resultArray);
+        // return resultArray;
 
     }
 }

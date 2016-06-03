@@ -19,7 +19,7 @@ import {FilterPipe} from "../filter.pipe";
             Filter: <input type="text" #filter (keyup)="0"> 
             <div class="list">
                 <ul>
-                    <li *ngFor="#listItem of listItems | myFilter:filter.value" (click)="onSelect(listItem)">{{listItem.name}} ({{listItem.amount}})</li>
+                    <li *ngFor="#listItem of (listItems | myFilter:filter.value)" (click)="onSelect(listItem)">{{listItem.name}} ({{listItem.amount}})</li>
                 </ul>
             </div>
         </section>
