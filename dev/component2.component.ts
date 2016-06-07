@@ -12,6 +12,6 @@ export class Component2 {
     constructor(private _router: Router) {}
 
     onNavigate() {
-        this._router.navigate(['Component1'])
+        this._router.navigate(['Component1',{source: 'Component2'}])
     }
 }
