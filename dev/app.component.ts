@@ -21,7 +21,7 @@ import {ShoppingListComponent} from "./shopping-list/shopping-list.component";
     directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-    {path: '/recipes', name: 'Recipes', component: RecipesComponent, useAsDefault: true},
+    {path: '/recipes/...', name: 'Recipes', component: RecipesComponent, useAsDefault: true},
     {path: '/shopping-list', name: 'ShoppingList', component: ShoppingListComponent}
 ])
 export class AppComponent {
