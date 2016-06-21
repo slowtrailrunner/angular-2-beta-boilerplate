@@ -8,23 +8,23 @@ export class RecipeService {
         return RECIPES;
     }
 
-    getRecipe(index:number) {
+    getRecipe(index: number) {
         return RECIPES[index];
     }
 
-    getRecipeIndex(recipe:Recipe) {
-        return RECIPES.indexOf(recipe);
+    getRecipeIndex(item: Recipe) {
+        return RECIPES.indexOf(item);
     }
 
-    insertRecipe(recipe:Recipe) {
-        RECIPES.push(recipe);
+    insertRecipe(item: Recipe) {
+        RECIPES.push(item);
     }
 
-    deleteRecipe(index:number) {
-        RECIPES.slice(index,1);
+    deleteRecipe(index: number) {
+        RECIPES.splice(index, 1);
     }
 
-    updateRecipe(index:number, recipe:Recipe) {
-        RECIPES[index] = recipe;
+    updateRecipe(index: number, item: Recipe) {
+        RECIPES[index] = item;
     }
 }

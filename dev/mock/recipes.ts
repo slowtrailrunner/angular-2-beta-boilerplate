@@ -1,7 +1,7 @@
 import {Recipe} from "../shared/recipe";
 import {Ingredient} from "../shared/ingredient";
 
-export let RECIPES: Recipe[] = [
+export let RECIPES:Recipe[] = [
     new Recipe('Wiener Schnitzel',
         'A tasty Schnitzel',
         'http://images.derberater.de/files/imagecache/456xXXX_berater/berater/slides/WienerSchnitzel.jpg',
