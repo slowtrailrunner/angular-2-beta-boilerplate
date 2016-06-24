@@ -1,6 +1,6 @@
 import {Component, OnInit} from "angular2/core";
 import {Recipe} from "../shared/recipe";
-import {RouteParams} from "angular2/router";
+import {RouteParams, Router} from "angular2/router";
 import {RecipeService} from "./recipe.service";
 
 @Component({
@@ -12,8 +12,13 @@ export class RecipeDetailComponent implements OnInit {
 
     constructor(
         private _routParams: RouteParams,
-        private _recipeService: RecipeService) {
+        private _recipeService: RecipeService,
+        private _router: Router) {
 
+    }
+
+    onEdit() {
+        this._router.navigate(['RecipeEdit', {editMode: 'edit', itemIndex: this._recipeIndex}]);
     }
 
     ngOnInit():any {
